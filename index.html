@@ -4,26 +4,26 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ไอ้หนุ่มหน้าหวาน | จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา</title>
-<meta name="description" content="จั้มแบตเตอรี่ ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา — เปลี่ยนแบต ช่วยเหลือฉุกเฉิน โอเวอร์ฮอลเครื่องยนต์ พ่นสี ระบบส่งกำลัง รีแมพ ECU" />
+<meta name="description" content="จั้มแบตเตอรี่ ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา · เปลี่ยนแบต ช่วยเหลือฉุกเฉิน โอเวอร์ฮอลเครื่องยนต์ พ่นสี ระบบส่งกำลัง รีแมพ ECU" />
 <meta name="theme-color" content="#0a0a0f" />
 
 <!-- Link preview (LINE, Facebook, WhatsApp, Messenger). og:image must be an
-     absolute URL — relative paths are ignored by every scraper. -->
+     absolute URL, relative paths are ignored by every scraper. -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ไอ้หนุ่มหน้าหวาน" />
 <meta property="og:locale" content="th_TH" />
 <meta property="og:locale:alternate" content="en_US" />
 <meta property="og:url" content="https://pattayamotorservice.github.io/" />
-<meta property="og:title" content="ไอ้หนุ่มหน้าหวาน — จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา" />
-<meta property="og:description" content="แบตหมดกลางทาง? เราไปหาคุณถึงที่ ตลอด 24 ชม. จั้มแบตเตอรี่ ซ่อมเครื่อง พ่นสี ระบบส่งกำลัง รีแมพ ECU — ช่างมืออาชีพ อะไหล่แท้ ราคาตรงไปตรงมา" />
+<meta property="og:title" content="ไอ้หนุ่มหน้าหวาน · จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา" />
+<meta property="og:description" content="แบตหมดกลางทาง? เราไปหาคุณถึงที่ ตลอด 24 ชม. จั้มแบตเตอรี่ ซ่อมเครื่อง พ่นสี ระบบส่งกำลัง รีแมพ ECU · ช่างมืออาชีพ อะไหล่แท้ ราคาตรงไปตรงมา" />
 <meta property="og:image" content="https://pattayamotorservice.github.io/assets/og.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="ไอ้หนุ่มหน้าหวาน — จั้มแบตเตอรี่ ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา" />
+<meta property="og:image:alt" content="ไอ้หนุ่มหน้าหวาน · จั้มแบตเตอรี่ ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="ไอ้หนุ่มหน้าหวาน — จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา" />
+<meta name="twitter:title" content="ไอ้หนุ่มหน้าหวาน · จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ พัทยา" />
 <meta name="twitter:description" content="แบตหมดกลางทาง? เราไปหาคุณถึงที่ ตลอด 24 ชม. จั้มแบตเตอรี่ ซ่อมเครื่อง พ่นสี รีแมพ ECU" />
 <meta name="twitter:image" content="https://pattayamotorservice.github.io/assets/og.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -144,8 +144,8 @@
   .chip b{color:var(--pink-2);font-weight:700}
 
   /* ---------- WORKSHOP SCENE ---------- */
-  /* One 13s loop: broken scooter limps in slowly (0–5.5s) → shutter down, sparks
-     fly (5.5–8.6s) → repaired scooter rides back out (8.8–12s) → beat → repeat. */
+  /* One 13s loop: broken scooter limps in slowly (0-5.5s) → shutter down, sparks
+     fly (5.5-8.6s) → repaired scooter rides back out (8.8-12s) → beat → repeat. */
   .ride{
     position:relative;height:262px;overflow:hidden;
     background:linear-gradient(180deg,var(--bg),var(--bg-2));
@@ -191,7 +191,7 @@
 
   .bob{animation:bob .42s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
   @keyframes bob{from{transform:translateY(0)}to{transform:translateY(-2.5px)}}
-  /* uneven hobble — one bad lurch per revolution, then a few smaller stumbles,
+  /* uneven hobble, one bad lurch per revolution, then a few smaller stumbles,
      so it never settles into a clean rhythm the way .bob does */
   .limp{animation:limp .66s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
   @keyframes limp{
@@ -236,7 +236,7 @@
     55% {opacity:.4}
     100%{opacity:0;transform:translate(-62px,-24px) scale(2.6)}
   }
-  /* black exhaust smoke — near-black fill with a lighter soot rim, otherwise it
+  /* black exhaust smoke, near-black fill with a lighter soot rim, otherwise it
      would vanish into the dark band. Delays are paired, so it coughs in bursts. */
   .smoke-black circle{
     animation:puff-black 1.3s ease-out infinite;
@@ -533,14 +533,14 @@
     <div class="hero-logo-fallback" id="logo-fb" style="display:none">ไอ้หนุ่มหน้าหวาน</div>
 
     <p class="tagline"
-       data-th="ศูนย์บริการมอเตอร์ไซค์ครบวงจร — ซ่อม แต่ง จูน ครบจบในที่เดียว"
-       data-en="Full-service motorcycle workshop — repair, upgrade &amp; tuning under one roof">
-       ศูนย์บริการมอเตอร์ไซค์ครบวงจร — ซ่อม แต่ง จูน ครบจบในที่เดียว</p>
+       data-th="ศูนย์บริการมอเตอร์ไซค์ครบวงจร · ซ่อม แต่ง จูน ครบจบในที่เดียว"
+       data-en="Full-service motorcycle workshop · repair, upgrade &amp; tuning under one roof">
+       ศูนย์บริการมอเตอร์ไซค์ครบวงจร · ซ่อม แต่ง จูน ครบจบในที่เดียว</p>
 
     <p class="sub"
-       data-th="ตั้งแต่เปลี่ยนแบตเตอรี่ ไปจนถึงโอเวอร์ฮอลเครื่องยนต์ พ่นสี และรีแมพ ECU — ช่างมืออาชีพ อะไหล่แท้ ราคาตรงไปตรงมา"
-       data-en="From a battery swap to a full engine rebuild, custom paint and ECU remapping — pro mechanics, genuine parts, honest pricing.">
-       ตั้งแต่เปลี่ยนแบตเตอรี่ ไปจนถึงโอเวอร์ฮอลเครื่องยนต์ พ่นสี และรีแมพ ECU — ช่างมืออาชีพ อะไหล่แท้ ราคาตรงไปตรงมา</p>
+       data-th="ตั้งแต่เปลี่ยนแบตเตอรี่ ไปจนถึงโอเวอร์ฮอลเครื่องยนต์ พ่นสี และรีแมพ ECU · ช่างมืออาชีพ อะไหล่แท้ ราคาตรงไปตรงมา"
+       data-en="From a battery swap to a full engine rebuild, custom paint and ECU remapping. Pro mechanics, genuine parts, honest pricing.">
+       ตั้งแต่เปลี่ยนแบตเตอรี่ ไปจนถึงโอเวอร์ฮอลเครื่องยนต์ พ่นสี และรีแมพ ECU · ช่างมืออาชีพ อะไหล่แท้ ราคาตรงไปตรงมา</p>
 
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:+66000000001"
@@ -879,7 +879,7 @@
       <span class="brand"><img src="assets/brands/zontes.png"   alt="" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><svg class="bm"><use href="#bm-zontes"/></svg><span class="bt">Zontes</span></span><span class="sep"></span>
       <span class="brand"><img src="assets/brands/sym.png"      alt="" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><svg class="bm"><use href="#bm-sym"/></svg><span class="bt">SYM</span></span><span class="sep"></span>
       <span class="brand"><img src="assets/brands/vespa.png"    alt="" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><svg class="bm"><use href="#bm-vespa"/></svg><span class="bt">Vespa</span></span><span class="sep"></span>
-      <!-- half B (identical — keeps the -50% loop seamless) -->
+      <!-- half B (identical, keeps the -50% loop seamless) -->
       <span class="brand"><img src="assets/brands/honda.png"    alt="" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><svg class="bm"><use href="#bm-honda"/></svg><span class="bt">Honda</span></span><span class="sep"></span>
       <span class="brand"><img src="assets/brands/yamaha.png"   alt="" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><svg class="bm"><use href="#bm-yamaha"/></svg><span class="bt">Yamaha</span></span><span class="sep"></span>
       <span class="brand"><img src="assets/brands/kawasaki.png" alt="" onerror="this.remove()" onload="this.parentNode.classList.add('has-img')"><svg class="bm"><use href="#bm-kawasaki"/></svg><span class="bt">Kawasaki</span></span><span class="sep"></span>
@@ -896,7 +896,7 @@
     <div class="sec-head rv">
       <span class="eyebrow" data-th="บริการ" data-en="Services">บริการ</span>
       <h2 data-th="งานที่เรารับทำ" data-en="What we do">งานที่เรารับทำ</h2>
-      <p data-th="ทุกอย่างที่มอเตอร์ไซค์ของคุณต้องการ — ในร้านเดียว" data-en="Everything your bike needs — all in one shop">ทุกอย่างที่มอเตอร์ไซค์ของคุณต้องการ — ในร้านเดียว</p>
+      <p data-th="ทุกอย่างที่มอเตอร์ไซค์ของคุณต้องการ · ในร้านเดียว" data-en="Everything your bike needs, all in one shop">ทุกอย่างที่มอเตอร์ไซค์ของคุณต้องการ · ในร้านเดียว</p>
     </div>
 
     <div class="grid">
@@ -912,7 +912,7 @@
       <div class="card rv">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M2 17h3l2-5h7l3 5h5"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M13 3l-2 5h4l-2 5"/></svg></div>
         <h3 data-th="ช่วยเหลือฉุกเฉินริมทาง" data-en="Roadside Assistance">ช่วยเหลือฉุกเฉินริมทาง</h3>
-        <p data-th="รถเสียกลางทาง โทรหาเรา — ออกไปช่วยถึงที่ พร้อมรถลากตลอด 24 ชม." data-en="Broken down? Call us — we come to you, plus 24/7 pickup and towing.">รถเสียกลางทาง โทรหาเรา — ออกไปช่วยถึงที่ พร้อมรถลากตลอด 24 ชม.</p>
+        <p data-th="รถเสียกลางทาง โทรหาเรา · ออกไปช่วยถึงที่ พร้อมรถลากตลอด 24 ชม." data-en="Broken down? Call us, we come to you, plus 24/7 pickup and towing.">รถเสียกลางทาง โทรหาเรา · ออกไปช่วยถึงที่ พร้อมรถลากตลอด 24 ชม.</p>
       </div>
 
       <!-- Engine -->
@@ -961,7 +961,7 @@
       <div class="card rv">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 4.8 5.3.6-4 3.6 1.1 5.2L12 14.6 7.4 17.2l1.1-5.2-4-3.6 5.3-.6L12 3Z"/></svg></div>
         <h3 data-th="แต่งรถ &amp; อุปกรณ์เสริม" data-en="Custom &amp; Accessories">แต่งรถ &amp; อุปกรณ์เสริม</h3>
-        <p data-th="ท่อแต่ง กรองแต่ง เบาะ แฮนด์ กันล้ม กล่องท้าย ติดตั้งครบวงจร" data-en="Exhausts, air filters, seats, bars, crash guards, top boxes — fully fitted.">ท่อแต่ง กรองแต่ง เบาะ แฮนด์ กันล้ม กล่องท้าย ติดตั้งครบวงจร</p>
+        <p data-th="ท่อแต่ง กรองแต่ง เบาะ แฮนด์ กันล้ม กล่องท้าย ติดตั้งครบวงจร" data-en="Exhausts, air filters, seats, bars, crash guards, top boxes, fully fitted.">ท่อแต่ง กรองแต่ง เบาะ แฮนด์ กันล้ม กล่องท้าย ติดตั้งครบวงจร</p>
       </div>
 
     </div>
@@ -974,7 +974,7 @@
     <div class="sec-head rv">
       <span class="eyebrow" data-th="ติดต่อ" data-en="Get in touch">ติดต่อ</span>
       <h2 data-th="แวะมาหาเราได้เลย" data-en="Come see us">แวะมาหาเราได้เลย</h2>
-      <p data-th="โทร แชท หรือขับมาที่ร้านได้เลย — ไม่ต้องนัดล่วงหน้า" data-en="Call, message, or just ride in — no appointment needed.">โทร แชท หรือขับมาที่ร้านได้เลย — ไม่ต้องนัดล่วงหน้า</p>
+      <p data-th="โทร แชท หรือขับมาที่ร้านได้เลย · ไม่ต้องนัดล่วงหน้า" data-en="Call, message, or just ride in, no appointment needed.">โทร แชท หรือขับมาที่ร้านได้เลย · ไม่ต้องนัดล่วงหน้า</p>
     </div>
 
     <div class="contact-wrap">
@@ -1025,8 +1025,8 @@
 
         <div class="hours rv">
           <h4><span class="dot"></span><span data-th="เวลาทำการ" data-en="Opening hours">เวลาทำการ</span></h4>
-          <div class="hours-row"><span data-th="จันทร์ – เสาร์" data-en="Mon – Sat">จันทร์ – เสาร์</span><b>08:00 – 19:00</b></div>
-          <div class="hours-row"><span data-th="อาทิตย์" data-en="Sunday">อาทิตย์</span><b>09:00 – 17:00</b></div>
+          <div class="hours-row"><span data-th="จันทร์ - เสาร์" data-en="Mon - Sat">จันทร์ - เสาร์</span><b>08:00 - 19:00</b></div>
+          <div class="hours-row"><span data-th="อาทิตย์" data-en="Sunday">อาทิตย์</span><b>09:00 - 17:00</b></div>
           <div class="hours-row"><span data-th="ช่วยเหลือฉุกเฉิน" data-en="Emergency callout">ช่วยเหลือฉุกเฉิน</span><b>24 / 7</b></div>
         </div>
       </div>
@@ -1045,8 +1045,8 @@
 <footer>
   <div class="wrap">
     <img class="fl" src="assets/logo.png" alt="" onerror="this.style.display='none'" />
-    <p data-th="© 2026 ไอ้หนุ่มหน้าหวาน — จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ · พัทยา ประเทศไทย"
-       data-en="© 2026 Ai Noom Na Wan — battery jump-start &amp; mobile motorcycle repair · Pattaya, Thailand">© 2026 ไอ้หนุ่มหน้าหวาน — จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ · พัทยา ประเทศไทย</p>
+    <p data-th="© 2026 ไอ้หนุ่มหน้าหวาน · จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ · พัทยา ประเทศไทย"
+       data-en="© 2026 Ai Noom Na Wan · battery jump-start &amp; mobile motorcycle repair · Pattaya, Thailand">© 2026 ไอ้หนุ่มหน้าหวาน · จั้มแบตเตอรี่ · ซ่อมมอเตอร์ไซค์นอกสถานที่ · พัทยา ประเทศไทย</p>
   </div>
 </footer>
 
@@ -1063,7 +1063,7 @@
       if (v !== null) el.innerHTML = v;
     });
     // Thai and English calls go to different people, so the links themselves
-    // have to switch with the language — not just the text.
+    // have to switch with the language, not just the text.
     document.querySelectorAll('[data-href-th]').forEach(function(el){
       var h = el.getAttribute('data-href-' + l);
       if (h !== null) el.setAttribute('href', h);
