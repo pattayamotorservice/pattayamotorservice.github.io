@@ -1147,10 +1147,16 @@
 
 <script>
   /* 19:00 to 07:00 counts as night. Set before any copy is written, because
-     copy lookups fall back through the night variant first. */
+     copy lookups fall back through the night variant first.
+     ?night and ?day force either mode, so the night page can be checked at
+     any hour without waiting for it to get dark. */
   (function(){
+    var q = location.search;
+    if (/[?&]day(=|&|$)/.test(q)) return;
     var h = new Date().getHours();
-    if (h >= 19 || h < 7) document.documentElement.classList.add('is-night');
+    if (/[?&]night(=|&|$)/.test(q) || h >= 19 || h < 7) {
+      document.documentElement.classList.add('is-night');
+    }
   })();
 
   function isNight(){ return document.documentElement.classList.contains('is-night'); }
