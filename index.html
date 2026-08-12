@@ -115,6 +115,21 @@
     background:linear-gradient(180deg,var(--pink-1) 10%,var(--pink-2) 55%,var(--pink-3) 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
+  /* Only shown between 19:00 and 07:00. It states the visitor's own clock time,
+     which is the one fact that matters at 3am: everyone else is shut. */
+  .livenow{
+    display:none;align-items:center;gap:9px;justify-content:center;
+    margin-bottom:16px;font-size:14.5px;font-weight:700;color:#b6f2cd;
+  }
+  .is-night .livenow{display:inline-flex}
+  .is-night .sub-more{display:none}
+  .livenow i{
+    width:9px;height:9px;border-radius:50%;background:#3ddc84;flex-shrink:0;
+    box-shadow:0 0 11px #3ddc84;animation:live 1.9s ease-in-out infinite;
+  }
+  @keyframes live{0%,100%{opacity:1}50%{opacity:.3}}
+  @media(prefers-reduced-motion:reduce){.livenow i{animation:none}}
+
   .tagline{
     font-size:clamp(23px,4vw,38px);color:var(--txt);font-weight:800;
     line-height:1.25;margin-bottom:12px;
@@ -558,6 +573,8 @@
 <!-- ============ HERO ============ -->
 <div class="hero" id="top">
   <div class="wrap">
+    <div class="livenow"><i></i><span id="livenow-txt"></span></div>
+
     <img class="hero-logo" src="assets/logo.png" alt="Shop logo"
          onerror="this.style.display='none';document.getElementById('logo-fb').style.display='block'" />
     <div class="hero-logo-fallback" id="logo-fb" style="display:none">ไอ้หนุ่มหน้าหวาน</div>
@@ -570,6 +587,8 @@
     <p class="sub"><span
        data-th="บริการนอกสถานที่ทั่วพัทยา จั้มแบตเตอรี่ เปลี่ยนแบต ซ่อมเครื่องถึงที่"
        data-en="Mobile service across Pattaya: battery jump-starts, battery swaps and on-the-spot repairs."
+       data-th-night="ตีสามก็โทรได้ เราออกไปหาคุณทั่วพัทยา จั้มแบตเตอรี่ เปลี่ยนแบต ซ่อมถึงที่"
+       data-en-night="Call at three in the morning if you have to. We ride out to you anywhere in Pattaya: jump-starts, battery swaps, repairs on the spot."
        >บริการนอกสถานที่ทั่วพัทยา จั้มแบตเตอรี่ เปลี่ยนแบต ซ่อมเครื่องถึงที่</span><span class="sub-more"
        data-th=" · หรือขับเข้ามาที่อู่เราก็ได้ งานหนักทำที่อู่ ตั้งแต่ยกเครื่อง พ่นสี ไปจนถึงรีแมพ ECU"
        data-en=" Or ride into our garage for the heavy work, from engine rebuilds and paint to ECU remapping."
@@ -1127,10 +1146,31 @@
 </a>
 
 <script>
+  /* 19:00 to 07:00 counts as night. Set before any copy is written, because
+     copy lookups fall back through the night variant first. */
+  (function(){
+    var h = new Date().getHours();
+    if (h >= 19 || h < 7) document.documentElement.classList.add('is-night');
+  })();
+
+  function isNight(){ return document.documentElement.classList.contains('is-night'); }
+
+  function paintLive(){
+    var el = document.getElementById('livenow-txt');
+    if (!el || !isNight()) return;
+    var d = new Date();
+    var hh = ('0' + d.getHours()).slice(-2), mm = ('0' + d.getMinutes()).slice(-2);
+    el.textContent = document.documentElement.lang === 'th'
+      ? 'ตอนนี้ ' + hh + ':' + mm + ' น. เราเปิดอยู่ โทรได้เลย'
+      : 'It is ' + hh + ':' + mm + ' and we are open. Call us.';
+  }
+
   function setLang(l, remember){
     document.documentElement.lang = l;
+    var night = isNight();
     document.querySelectorAll('[data-th]').forEach(function(el){
-      var v = el.getAttribute('data-' + l);
+      var v = night ? el.getAttribute('data-' + l + '-night') : null;
+      if (v === null) v = el.getAttribute('data-' + l);
       if (v !== null) el.innerHTML = v;
     });
     // Thai and English calls go to different people, so the links themselves
@@ -1141,6 +1181,7 @@
     });
     document.getElementById('btn-th').classList.toggle('on', l === 'th');
     document.getElementById('btn-en').classList.toggle('on', l === 'en');
+    paintLive();
     /* only an explicit click is remembered, so auto-detection never sticks */
     if (remember !== false) { try { localStorage.setItem('lang', l); } catch (e) {} }
   }
@@ -1161,7 +1202,11 @@
       return String(x).toLowerCase().indexOf('th') === 0;
     });
     if (!wantsThai) setLang('en', false);
+    else setLang('th', false);   /* paints the clock even when Thai is the default */
   })();
+
+  /* keep the clock honest for anyone who leaves the page open */
+  setInterval(paintLive, 30000);
 
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
