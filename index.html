@@ -118,10 +118,18 @@
   /* Only shown between 19:00 and 07:00. It states the visitor's own clock time,
      which is the one fact that matters at 3am: everyone else is shut. */
   .livenow{
-    display:none;align-items:center;gap:9px;justify-content:center;
-    margin-bottom:16px;font-size:14.5px;font-weight:700;color:#b6f2cd;
+    display:none;align-items:center;gap:10px;justify-content:center;
+    margin-bottom:18px;font-size:15px;font-weight:700;color:#c6f7d8;
+    border:1px solid rgba(61,220,132,.34);background:rgba(61,220,132,.1);
+    border-radius:999px;padding:9px 20px;
   }
   .is-night .livenow{display:inline-flex}
+  /* at 3am there is one thing to do, so the call button owns the row */
+  .is-night .cta-row{flex-direction:column;align-items:center}
+  .is-night .cta-row .btn:first-child{
+    width:100%;max-width:430px;padding:18px 26px;font-size:18px;
+  }
+  .is-night .cta-row .btn:first-child svg{width:21px;height:21px}
   .is-night .sub-more{display:none}
   .livenow i{
     width:9px;height:9px;border-radius:50%;background:#3ddc84;flex-shrink:0;
@@ -581,7 +589,9 @@
 
     <p class="tagline"
        data-th="แบตหมด? รถเสียกลางทาง? <b>อย่าเข็น เราไปหาคุณเอง</b>"
-       data-en="Dead battery? Broken down? <b>Don't push it, we come to you</b>">
+       data-en="Dead battery? Broken down? <b>Don't push it, we come to you</b>"
+       data-th-night="ดึกแล้ว ร้านอื่นปิดหมด <b>แต่เราไม่ปิด</b>"
+       data-en-night="It is late and everywhere else is shut. <b>We are not.</b>">
        แบตหมด? รถเสียกลางทาง? <b>อย่าเข็น เราไปหาคุณเอง</b></p>
 
     <p class="sub"><span
