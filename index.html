@@ -32,8 +32,9 @@
 <meta name="twitter:image" content="https://pattayamotorservice.github.io/assets/og.png" />
 
 <!-- Lets Google render the address, hours and phone straight into the search
-     result instead of a plain blue link. streetAddress is left out until the
-     real one is confirmed; a wrong address here would be worse than none. -->
+     result instead of a plain blue link. The address, phone and hours are kept
+     byte-identical to the Business Profile, since local ranking rewards the
+     same details appearing the same way everywhere. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +51,8 @@
   "currenciesAccepted": "THB",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Pattaya",
+    "streetAddress": "Soi Nong Krabok Sukjai",
+    "addressLocality": "Pattaya City",
     "addressRegion": "Chon Buri",
     "addressCountry": "TH"
   },
@@ -617,9 +619,9 @@
             <div class="ch-txt"><div class="k">Instagram</div><div class="v">@yourshop</div></div>
           </a>
 
-          <a class="ch" href="https://maps.google.com/?q=YOUR+SHOP+NAME+Pattaya" target="_blank" rel="noopener">
+          <a class="ch" href="https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%AD%E0%B8%81%20%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B7%E0%B8%AD%20%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2" target="_blank" rel="noopener">
             <div class="ch-ico ch-map"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div class="ch-txt"><div class="k">ที่อยู่</div><div class="v">123 ถนนตัวอย่าง พัทยา ชลบุรี 20150</div></div>
+            <div class="ch-txt"><div class="k">ที่อยู่</div><div class="v">ซอยหนองกระบอก สุขใจ เมืองพัทยา ชลบุรี 20150</div></div>
           </a>
         </div>
 
@@ -633,7 +635,7 @@
 
       <div class="map-box rv" id="map">
         <iframe
-          src="https://www.google.com/maps?q=Pattaya%20Chonburi%20Thailand&output=embed"
+          src="https://www.google.com/maps?q=%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%AD%E0%B8%81%20%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B7%E0%B8%AD%20%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2%20%E0%B8%8A%E0%B8%A5%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&z=14&output=embed"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Shop location"></iframe>
       </div>
